@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.restservicesimple.bookActivity">
+
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book a room"
+                android:textSize="20dp"></TextView>
+
+
+            <EditText
+                android:id="@+id/fromTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="fromTime from 1970"></EditText>
+
+            <EditText
+                android:id="@+id/toTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="toTime from 1970"></EditText>
+
+            <EditText
+                android:id="@+id/userId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="userID"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/purpose"
+                android:hint="purpose"></EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/roomId"
+                android:hint="roomID"></EditText>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book"
+                android:onClick="bookARoom"
+                android:id="@+id/bookButton"
+                ></Button>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/goBack"
+                android:onClick="goBack"
+                android:text="Back"></Button>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

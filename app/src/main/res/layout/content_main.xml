@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.restservicesimple.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List of reservations"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-black"></TextView>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/mainSwiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mainRecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="See available rooms"
+        android:id="@+id/bookButton"
+        android:onClick="getAllFreeRooms"></Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Reservation"
+        android:id="@+id/deleteButton"
+        android:onClick="gotoDeletePage"
+        ></Button>
+
+    <TextView
+        android:id="@+id/mainMessageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+</LinearLayout>

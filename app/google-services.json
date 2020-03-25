@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1050690948344",
+    "firebase_url": "https://restservicesimple.firebaseio.com",
+    "project_id": "restservicesimple",
+    "storage_bucket": "restservicesimple.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050690948344:android:4382a4ca3f8ae5da5cff0d",
+        "android_client_info": {
+          "package_name": "com.example.mobilerestservice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1050690948344-tgfdpj7osg8gmmd3hs8i922nho8hmpmu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mobilerestservice",
+            "certificate_hash": "d02fd6cd810684e5adba071a67d2072cb5c40692"
+          }
+        },
+        {
+          "client_id": "1050690948344-s8lrvn3bls804qe984vbnuuhtgjlehcf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNN5F2L1JptHFD1dwVFvQrYahLrZWXmsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1050690948344-s8lrvn3bls804qe984vbnuuhtgjlehcf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

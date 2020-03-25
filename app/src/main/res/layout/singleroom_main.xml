@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.restservicesimple.SingleRoomMain">
+    <!-- SnackBar requires CoordinatorLayout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/singleRoomHeadingTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/singleRoomTitleEditText"
+                    android:text="Title" />
+
+                <EditText
+                    android:id="@+id/singleRoomTitleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Title"
+                    android:inputType="textCapWords" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/singleRoomNameEditText"
+                    android:text="Rooms" />
+
+                <EditText
+                    android:id="@+id/singleRoomNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Rooms"
+                    android:inputType="textCapWords" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/singleRoomDescriptionEditText"
+                    android:text="Desciption" />
+
+                <EditText
+                    android:id="@+id/singleRoomDescriptionEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description"
+                    android:inputType="textCapWords" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/singleRoomCapacityEditText"
+                    android:text="Capacity" />
+
+                <EditText
+                    android:id="@+id/singleRoomCapacityEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Capacity"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/singleRoomRemarksEditText"
+                    android:text="Remarks" />
+
+                <EditText
+                    android:id="@+id/singleRoomRemarksEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Remarks"
+                    android:inputType="text" />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Get room"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="updateButtonClicked"
+
+                    android:text="Update" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="deleteRoomButtonClicked"
+                    android:text="Delete" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="backButtonClicked"
+                    android:text="Back" />
+
+                <TextView
+                    android:id="@+id/singleBookMessageTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
