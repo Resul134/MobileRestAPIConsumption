@@ -1,6 +1,9 @@
 package com.example.restservicesimple;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -41,10 +44,13 @@ public class MainActivity extends AppCompatActivity {
     TextView mainMessageTextView;
 
 
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Har låst orientation fordi mainactivity ikke er glad for landscape
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
