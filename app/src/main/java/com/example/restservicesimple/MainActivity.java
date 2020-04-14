@@ -37,6 +37,7 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = "MYROOMS";
+    private static final String KotlinString = "Kotlin";
     TextView mainMessageTextView;
 
 
@@ -103,6 +104,13 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.bookInfoItem:
                 Toast.makeText(MainActivity.this, "Click on an element on the list, to access booking page.", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.kotlinItem:
+                String message = "This activity was created in the purpose of showing, that kotlin could also be used and is" +
+                        "an effective programming tool - It was also a part of the assignment";
+                Intent intent = new Intent(MainActivity.this, KotlinTest.class);
+                intent.putExtra(KotlinString, message);
+                startActivity(intent);
                 return true;
 
             default:

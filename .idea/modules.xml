@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RestServiceSimple.iml" filepath="$PROJECT_DIR$/RestServiceSimple.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RestServiceSimple.iml" filepath="$PROJECT_DIR$/RestServiceSimple.iml" group="RestServiceSimple" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="RestServiceSimple/app" />
     </modules>
   </component>
 </project>

@@ -46,15 +46,18 @@ public class deleteActivity extends AppCompatActivity {
 
         int deleteIDParsed = Integer.parseInt(deletebookID);
 
-        Call<Reservations> deleteReservationCall = reservationService.deleteReservation(deleteIDParsed);
+        Call<Integer> deleteReservationCall = reservationService.deleteReservation(deleteIDParsed);
 
-        deleteReservationCall.enqueue(new Callback<Reservations>() {
+        deleteReservationCall.enqueue(new Callback<Integer>() {
             @Override
-            public void onResponse(Call<Reservations> call, Response<Reservations> response) {
+            public void onResponse(Call<Integer> call, Response<Integer> response) {
                 if (response.isSuccessful())
                 {
+
+                    Integer messageRes = response.body();
+
                     String message = "Reservation deleted, id: " + originalReservations.getId();
-                    Toast.makeText(getBaseContext(), message, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(deleteActivity.this, "Deleted reservation: " + messageRes.toString(), Toast.LENGTH_SHORT).show();
                     Log.d("DELETETAG", message);
 
 
@@ -62,13 +65,13 @@ public class deleteActivity extends AppCompatActivity {
                 else
                 {
                     String problem = call.request().url() + "\n" + response.code() + " " + response.message();
-                    Toast.makeText(getBaseContext(), problem, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(deleteActivity.this, problem, Toast.LENGTH_SHORT).show();
                     Log.d("DELETETAG", problem);
                 }
             }
 
             @Override
-            public void onFailure(Call<Reservations> call, Throwable t) {
+            public void onFailure(Call<Integer> call, Throwable t) {
                 Log.e("DELETETAG", "Problem: " + t.getMessage());
             }
         });

@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".deleteActivity"></activity>
+        <activity android:name=".KotlinTest"></activity>
+        <activity android:name="com.example.mobilerestservice.KotlintestActivity" />
+        <activity android:name=".deleteActivity" />
         <activity android:name=".bookActivity" />
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld

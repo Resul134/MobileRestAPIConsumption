@@ -11,7 +11,7 @@
     <item
         android:id="@+id/infoItem"
         android:orderInCategory="100"
-        android:title="Info"
+        android:title="SwipeInfo"
         app:showAsAction="never" />
     <item
         android:id="@+id/bookInfoItem"
@@ -25,4 +25,13 @@
         android:orderInCategory="100"
         android:title="Zealand"
         app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/kotlinItem"
+        android:orderInCategory="100"
+        android:title="Kotlin"
+        app:showAsAction="never" />
+
+
 </menu>

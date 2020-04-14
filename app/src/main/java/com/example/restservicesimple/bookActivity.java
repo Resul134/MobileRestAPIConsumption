@@ -111,15 +111,15 @@ public class bookActivity extends AppCompatActivity {
 
         Reservations reserv = new Reservations(fromTimeParsed, toTimeParsed, userIDString, purposeString, roomIDparsed);
 
-        Call<Reservations> postReservation  = reservationService.saveBookBody(reserv);
-        postReservation.enqueue(new Callback<Reservations>() {
+        Call<Integer> postReservation  = reservationService.saveBookBody(reserv);
+        postReservation.enqueue(new Callback<Integer>() {
             @Override
-            public void onResponse(Call<Reservations> call, Response<Reservations> response) {
+            public void onResponse(Call<Integer> call, Response<Integer> response) {
                 if (response.isSuccessful())
                 {
-                    Reservations theNewReservation = response.body();
+                    Integer theNewReservation = response.body();
                     Log.d("MYRESERVATIONS", theNewReservation.toString());
-                    Toast.makeText(bookActivity.this, "Reservation added: " + theNewReservation.getId(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(bookActivity.this, "Reservation added: " + theNewReservation.toString(), Toast.LENGTH_SHORT).show();
 
                 }
                 else
@@ -131,7 +131,7 @@ public class bookActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<Reservations> call, Throwable t) {
+            public void onFailure(Call<Integer> call, Throwable t) {
                 Log.e("MYRESERVATIONS", t.getMessage());
             }
         });

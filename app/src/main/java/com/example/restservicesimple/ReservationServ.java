@@ -31,10 +31,10 @@ public interface ReservationServ {
                                 @Field("userId") int userId, @Field("purpose") String purpose, @Field("roomId") int roomId) ;
 
     @POST("reservations")
-    Call<Reservations> saveBookBody(@Body Reservations reservations);
+    Call<Integer> saveBookBody(@Body Reservations reservations);
 
     @DELETE("reservations/{id}")
-    Call<Reservations> deleteReservation(@Path("id") int id);
+    Call<Integer> deleteReservation(@Path("id") int id);
 
     @PUT("reservations/{id}")
     Call<Reservations> updateReservation(@Path("id") int id, @Body Reservations reservations);
